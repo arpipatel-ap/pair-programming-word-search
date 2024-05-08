@@ -35,4 +35,21 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+  it("should return false if the matrix is empty", function() {
+    const result = wordSearch([], 'WORD');
+
+    assert.isFalse(result);
+  });
+
+  it("should return false if the word is empty", function() {
+    const result = wordSearch([
+      ['A', 'B', 'C', 'D'],
+      ['E', 'F', 'G', 'H'],
+      ['I', 'J', 'K', 'L'],
+      ['M', 'N', 'O', 'P']
+    ], '');
+
+    assert.isFalse(result);
+  });
+
 });
